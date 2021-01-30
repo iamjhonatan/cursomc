@@ -21,7 +21,6 @@ import com.jhonatanmedeiros.cursomc.domain.enums.TipoCliente;
 
 @Entity
 public class Cliente implements Serializable{
-	
 	private static final long serialVersionUID = 1L;
 	
 	@Id
