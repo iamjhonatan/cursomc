@@ -31,7 +31,8 @@ public class SecurityConfig extends WebSecurityConfigurerAdapter{
 	// caminho onde é permitido apenas recuperar os dados (listar)
 	private static final String[] PUBLIC_MATCHERS_GET = {
 			"/produtos/**",
-			"/categorias/**"
+			"/categorias/**",
+			"/clientes/**"
 	};
 	
 	//permitindo todas as requisições do vetor 'PUBLIC_MATCHERS' | os demais, exija autenticação
