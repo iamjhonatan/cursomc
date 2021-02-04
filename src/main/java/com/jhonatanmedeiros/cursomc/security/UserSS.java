@@ -16,7 +16,7 @@ public class UserSS implements UserDetails{
 	private Integer id;
 	private String email;
 	private String senha;
-	private Collection<? extends GrantedAuthority> authorities;
+	private Collection<? extends GrantedAuthority> authorities; // perfis
 	
 	public UserSS() {
 		
@@ -67,6 +67,11 @@ public class UserSS implements UserDetails{
 	@Override
 	public boolean isEnabled() {
 		return true;
+	}
+	
+	// testando se um dado usuário possui um dado perfil
+	public boolean hasRole(Perfil perfil) {
+		return getAuthorities().contains(new SimpleGrantedAuthority(perfil.getDescricao()));
 	}
 
 }
