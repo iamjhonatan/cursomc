@@ -49,7 +49,8 @@ public class SecurityConfig extends WebSecurityConfigurerAdapter{
 	};
 	
 	private static final String[] PUBLIC_MATCHERS_POST = {
-			"/clientes/**"
+			"/clientes/**",
+			"/auth/forgot/**"
 	};
 	
 	//permitindo todas as requisições do vetor 'PUBLIC_MATCHERS' | os demais, exija autenticação
